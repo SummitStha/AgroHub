@@ -1,0 +1,62 @@
+{% load staticfiles %}
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Growing Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+	SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- Custom Theme files -->
+<link href="{% static 'css/bootstraphome.css' %}" type="text/css" rel="stylesheet" media="all">
+<link href="{% static 'css/stylehome.css' %}" type="text/css" rel="stylesheet" media="all">   
+<link rel="stylesheet" href="{% static 'css/flexsliderhome.css' %}" type="text/css" media="all" property="" />   
+<!-- //Custom Theme files -->
+<!-- font-awesome icons -->
+<link href="{% static 'css/font-awesomehome.css' %}" rel="stylesheet"> 
+<!-- //font-awesome icons -->
+<!-- js -->
+<script src="{% static 'js/jquery-2.2.3.min.js' %}"></script> 
+<!-- //js -->
+<!-- smooth scrolling -->
+<!-- web-fonts --> 
+<link href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+<!-- //web-fonts --> 
+</head>
+<body>
+<script type="text/javascript">
+  $(document).ready(function(){       
+   $('#myModal').modal('show');
+    }); 
+</script>
+<!-- banner -->
+	<div class="banner-1">  
+		<div class="header agileinfo-header"><!-- header -->
+			<nav class="navbar navbar-default">
+				<div class="container">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<h1><a href="/"><i class="fa fa-pagelines" aria-hidden="true"></i>AgroHub</a></h1>
+					</div> 
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav navbar-left"> 
+							<li><a href="/" class="btn w3ls-hover">Home</a></li>
+							<li><a href="{% url 'tourism:farm_list' %}" class="btn w3ls-hover">Agri Tourism</a></li><li><a href="{% url 'product_list' %}" class="w3ls-hover active" >Market Place</a></li>
+							<li><a href="{% url 'home' %}" class="btn w3ls-hover">Research Hub</a></li>
+            {% if user.is_authenticated %}
+			<li><a href="gallery.html" class="btn w3ls-hover"></a></li>
+			<li><a href="{% url 'logout' %}" class="btn w3ls-hover">Logout</a></li>
+			{% else %}
+            <li><a href="{% url 'login' %}" class="btn w3ls-hover">Login</a></li>
+            <li><a href="{% url 'signup' %}" class="btn w3ls-hover">Signup</a></li>
+            {% endif %}
+						</ul>	   
+						<div class="clearfix"> </div>
+					</div><!-- //navbar-collapse --> 
+				</div><!-- //container-fluid -->
+			</nav>
+		</div><!-- //header -->	

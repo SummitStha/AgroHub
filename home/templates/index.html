@@ -1,0 +1,177 @@
+
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Agro Hub</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Growing Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+	SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- Custom Theme files -->
+<link href="{% static 'css/bootstraphome.css' %}" type="text/css" rel="stylesheet" media="all">
+<link href="{% static 'css/stylehome.css' %}" type="text/css" rel="stylesheet" media="all">   
+<link rel="stylesheet" href="{% static 'css/flexsliderhome.css' %}" type="text/css" media="all" property="" />   
+<!-- //Custom Theme files -->
+<!-- font-awesome icons -->
+<link href="{% static 'css/font-awesomehome.css' %}" rel="stylesheet"> 
+<!-- //font-awesome icons -->
+<!-- js -->
+<script src="{% static 'js/jquery-2.2.3.min.js' %}"></script> 
+<!-- //js -->
+<!-- smooth scrolling -->
+<!-- web-fonts --> 
+<link href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+<!-- //web-fonts --> 
+</head>
+<body>
+<script type="text/javascript">
+  $(document).ready(function(){       
+   $('#myModal').modal('show');
+    }); 
+</script>
+<!-- banner -->
+	<div class="banner">  
+{% include 'base.html' %}
+
+
+
+
+
+    <!-- //header -->	
+		<!-- banner-text -->
+		<div class="banner-text"> 
+			<div class="container">
+				<div class="flexslider">
+					<ul class="slides">
+						<li>
+							<div class="banner-w3lstext">
+								<h3>AgriTourism</h3>
+								<p>Agri tourism is the combination of tourism and agriculture it is fastest growing segment of travel industry that offers visit agricultural industries, working in farms, buy organic products, enjoy healthy and nutritious fruits, entertainment with local culture, education, relaxation, outdoor adventures, picking fruit, feeding animals etc. </p>
+							</div>
+						</li>
+						<li>
+							<div class="banner-w3lstext">
+								<h3>Involvement of Agriculture Experts & Market Platform</h3>
+								<p>We focus on direct linkage between buyer and supplier</p>
+							</div>
+						</li>
+						<li>
+							<div class="banner-w3lstext">
+								<h3>Research Hub</h3>
+								<p>We provide platform to share research papers as well as projects.</p>
+							</div>
+						</li>
+					</ul> 
+				</div> 	 
+			</div>
+		</div>
+		<!-- //banner-text -->    
+	</div>
+	<!-- //banner --> 
+	<!-- //services -->
+	<!-- bootstrap-pop-up -->
+	<div class="modal video-modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModal">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content" style="margin-top: 100px !important;">
+				<div class="modal-header">
+					<i class="fa fa-pagelines" aria-hidden="true"></i>We Promote AgriTourism
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>						
+				</div>
+				<section>
+					<div class="modal-body">
+						<img src="{% static 'images/s1.jpg' %}" alt=" " class="img-responsive" style="width: 100%;" />
+						<p style="font-size: 15px;">Agri tourism is the combination of tourism and agriculture,it is fastest growing segment of travel industry that offers visit agricultural industries, working in farms, buy organic products, enjoy healthy and nutritious fruits, entertainment with local culture, education, relaxation, outdoor adventures, picking fruit, feeding animals etc. </p>
+            <button type="button" class="btn btn-success"><a href="{% url 'tourism:farm_list' %}"> Visit Us </a></button>
+
+					</div>
+				</section>
+			</div>
+		</div>
+	</div>
+<!-- //bootstrap-pop-up -->
+
+ 
+	<!-- FlexSlider --> 
+	<script defer src="{% static 'js/jquery.flexslider.js' %}"></script>
+		<script type="text/javascript">
+			$(window).load(function(){
+			  $('.flexslider').flexslider({
+				animation: "slide",
+				start: function(slider){
+				  $('body').removeClass('loading');
+				}
+			  });
+			});
+		</script>
+	<!-- End-slider-script --> 
+<!-- Flexslider-js for-testimonials -->
+<script type="text/javascript">
+							$(window).load(function() {
+								$("#flexiselDemo1").flexisel({
+									visibleItems:1,
+									animationSpeed: 1000,
+									autoPlay: true,
+									autoPlaySpeed: 3000,    		
+									pauseOnHover: true,
+									enableResponsiveBreakpoints: true,
+									responsiveBreakpoints: { 
+										portrait: { 
+											changePoint:480,
+											visibleItems: 1
+										}, 
+										landscape: { 
+											changePoint:640,
+											visibleItems:1
+										},
+										tablet: { 
+											changePoint:768,
+											visibleItems: 1
+										}
+									}
+								});
+								
+							});
+					</script>
+					<script type="text/javascript" src="{% static 'js/jquery.flexisel.js' %}"></script>
+<!-- //Flexslider-js for-testimonials -->
+
+
+	<!-- start-smooth-scrolling -->
+	<script type="text/javascript" src="{% static 'js/move-top.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/easing.js' %}"></script>	
+		<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+			
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+				});
+			});
+		</script>
+	<!-- //end-smooth-scrolling   -->	
+	<!-- smooth-scrolling-of-move-up -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+			var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+			};
+			*/
+			
+			$().UItoTop({ easingType: 'easeOutQuart' });
+			
+		});
+	</script>
+	<!-- //smooth-scrolling-of-move-up -->   
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+</body>
+</html>

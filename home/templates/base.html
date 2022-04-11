@@ -1,0 +1,149 @@
+		{% load staticfiles %}
+    <div class="header agileinfo-header"><!-- header -->
+			<nav class="navbar navbar-default">
+				<div class="container">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<h1><a href="index.html"><i class="fa fa-pagelines" aria-hidden="true"></i>AgroHub</a></h1>
+					</div> 
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav navbar-left"> 
+
+							<li><a href="/" class="w3ls-hover active">Home</a></li>
+							<li><a href="{% url 'tourism:farm_list' %}" class="btn w3ls-hover">Agri Tourism</a></li><li><a href="{% url 'product_list' %}" class="btn w3ls-hover">Market</a></li>
+							 <li><a href="#" class="dropdown-toggle btn w3ls-hover" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Information <span class="caret"></span></a>
+                <ul class="dropdown-menu" style="background: green;">
+                  <li><button type="button" class="btn btn-info"> Agriculture Information</button></li>
+                  <li><button type="button" class="btn btn-success"> AgroExpert Information</button></li>     
+                </ul>
+              </li> 
+							<li><a href="{% url 'research_hub' %}" class="btn w3ls-hover">ResearchHub</a></li>
+            {% if user.is_authenticated %}
+			           <li><a href="{% url 'logout' %}" class="btn w3ls-hover">Logout</a></li>
+			           {% else %}
+            <li><a href="{% url 'login_option' %}" class="btn w3ls-hover">Login</a></li>
+            {% endif %}
+						</ul>	   
+						<div class="clearfix"> </div>
+					</div><!-- //navbar-collapse --> 
+				</div><!-- //container-fluid -->
+			</nav>
+		</div>
+<div class="modal fade show" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" style="display: block; padding-right: 15px;">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content" style="margin-top: 100px;">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">General Informations</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <h3>Finance Minister unveils budget for Agriculture (Ministry of Agriculture and Development: NRs 24.2 billion) </h3>
+                        <p><li>Policies for collective farming and contract farming will be formulated and implemented.</li><li>Contributory pension for farmers based on land area and ownership will be explored. </li><li>Provision of premium grant for agricultural and livestock insurance will be continued.</li><li>Provision of 5 percent subsidy in the interest of agriculture and livestock loan will be continued.</li><li>Dairy industry will be established to be self-reliant in dairy products.</li><li>Several agriculture development programs like commercial agriculture production pocket and block development, small irrigation, agriculture extension and ago-based income generating sectors</li> </p>
+                        <h3>Agriculture loans under interest rate subsidy programme increase</h3>
+                        <p>Banks and financial institutions (BFIs) disbursed agricultural loans worth Rs 1.55 billion in fiscal 2015-16 as compared to around Rs 433 million of the previous fiscal under the government’s interest rate subsidy programme.</p>
+                        <p>The total loan portfolio under this scheme has expanded to Rs 1.99 billion since the government had introduced interest rate subsidy for commercial agriculture loans programme from fiscal 2014-15.
+
+                      Initially, only commercial banks — class ‘A’ financial institutions — were authorised to extend such loans. But the government later authorised class ‘B’ and class ‘C’ financial institutions to also sanction loans of up to Rs 10 million to a single borrower at an interest rate not exceeding six per cent.
+
+                      According to Nepal Rastra Bank (NRB), altogether 27 financial institutions have issued such loans for 2,342 projects.
+
+                      BFIs had obtained Rs 41.9 million from NRB as interest rate subsidy in the last fiscal. Altogether 19 commercial banks, seven development banks and one finance company have sanctioned loans under this scheme, according to the central bank.
+
+                      Average size of loans sanctioned by the BFIs stands at Rs 849,701 per borrower, as the BFIs floated loans to 2,342 borrowers under this scheme.
+
+                      The state-owned Rastriya Banijya Bank (RBB) was the best performer for sanctioning a total of Rs 620 million, followed by Agricultural Development Bank at Rs 470 million and Nepal Bank Ltd at Rs 270 million.
+
+                      Similarly, Laxmi Bank topped the list among private sector banks under this scheme, with loans worth Rs 80 million sanctioned followed by Nabil Bank at Rs 70 million, and Nepal Investment Bank and Machhapuchchhre Bank at Rs 40 million each.
+
+                      The central bank reimburses up to 400 basis points of the subsidised interest rate to the respective BFIs. This means 40 per cent of the interest rate charged by the BFIs is borne by NRB. Despite this facility, credit expansion in the agriculture sector has been slow.
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary waves-effect waves-light" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary waves-effect waves-light">See More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal video-modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="myModal">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content" style="margin-top: 100px !important;">
+        <div class="modal-header">
+          <i class="fa fa-pagelines" aria-hidden="true"></i>Agriculture Experts
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>            
+        </div>
+        <section>
+          <div class="modal-body">
+           <table class="table">
+    <thead>
+      <tr style="text-decoration: bold;">
+        <th>Name</th>
+        <th>Field Of Expert</th>
+        <th>Location</th>
+        <th>Contact</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Keshav Gautam</td>
+        <td>Seeds and Vegetables</td>
+        <td>Chabahil,Kathmandu</td>
+        <td>9813175858</td>
+      </tr>
+      <tr>
+        <td>Dr. Bharat Kumar Poudyal</td>
+        <td>Chief Technical Advisor</td>
+        <td>Kathmandu</td>
+        <td>9845672356</td>
+      </tr>
+      <tr>
+        <td>Indra Raj Pandey</td>
+        <td>Horticulture & Market system Development</td>
+        <td>Butwal</td>
+        <td>9843015924</td>
+      </tr>
+      <tr>
+        <td>Kishor Prasad Kayastha</td>
+        <td>Chief of Livestock</td>
+        <td>Pokhara</td>
+        <td>9818576794</td>
+      </tr>
+       <tr>
+        <td>Mr. Shiva Yendhyo</td>
+        <td>Senior Field Technician</td>
+        <td>Dang</td>
+        <td>9841374239</td>
+      </tr>
+    </tbody>
+  </table>
+
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+<script type="text/javascript">
+  $(document).ready(function () {
+
+     // Attach Button click event listener 
+    $(".btn-info").click(function(){
+
+         // show Modal
+         $('#exampleModalLong').modal('show');
+    });
+    $(".btn-success").click(function(){
+
+         // show Modal
+         $('#modal2').modal('show');
+    });
+});
+</script>

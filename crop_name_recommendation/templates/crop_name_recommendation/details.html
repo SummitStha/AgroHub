@@ -1,0 +1,253 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>AgroTourism</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Growing Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+  SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- Custom Theme files -->
+<link href="{% static 'css/bootstraphome.css' %}" type="text/css" rel="stylesheet" media="all">
+<link href="{% static 'css/stylehome.css' %}" type="text/css" rel="stylesheet" media="all">   
+<link rel="stylesheet" href="{% static 'css/flexsliderhome.css' %}" type="text/css" media="all" property="" />   
+<!-- //Custom Theme files -->
+<!-- font-awesome icons -->
+<link href="{% static 'css/font-awesomehome.css' %}" rel="stylesheet"> 
+<!-- //font-awesome icons -->
+<!-- js -->
+<script src="{% static 'js/jquery-2.2.3.min.js' %}"></script> 
+<!-- //js -->
+<!-- smooth scrolling -->
+<!-- web-fonts --> 
+<link href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+<!-- //web-fonts --> 
+</head>
+<body>
+<script type="text/javascript">
+  $(document).ready(function(){       
+   $('#myModal').modal('show');
+    }); 
+</script>
+<!-- banner -->
+  <div class="banner-1">  
+    <div class="header agileinfo-header"><!-- header -->
+      <nav class="navbar navbar-default">
+        <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <h1><a href="/"><i class="fa fa-pagelines" aria-hidden="true"></i>AgroHub</a></h1>
+          </div> 
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-left"> 
+
+              <li><a href="/" class="w3ls-hover active">Home</a></li>
+              <li><a href="{% url 'tourism:farm_list' %}" class="btn w3ls-hover">Agri Tourism</a></li><li><a href="{% url 'product_list' %}" class="btn w3ls-hover">Market</a></li>
+               <li><a href="#" class="dropdown-toggle btn w3ls-hover" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Information <span class="caret"></span></a>
+                <ul class="dropdown-menu" style="background: green;">
+                  <li><button type="button" class="btn btn-info"> Agriculture Information</button></li>
+                  <li><button type="button" class="btn btn-success"> AgroExpert Information</button></li>     
+                </ul>
+              </li> 
+              <li><a href="{% url 'research_hub' %}" class="btn w3ls-hover">ResearchHub</a></li>
+            {% if user.is_authenticated %}
+                 <li><a href="{% url 'logout' %}" class="btn w3ls-hover">Logout</a></li>
+                 {% else %}
+            <li><a href="{% url 'login_option' %}" class="btn w3ls-hover">Login</a></li>
+            {% endif %}
+            </ul>    
+            <div class="clearfix"> </div>
+          </div><!-- //navbar-collapse --> 
+        </div><!-- //container-fluid -->
+      </nav>
+    </div><!-- //header --> 
+    <!-- banner-text -->
+    <div class="banner-text"> 
+      <div class="container">
+        <div class="flexslider">
+          <ul class="slides">
+            <li>
+              <div class="banner-w3lstext">
+                <h3>AgriTourism</h3>
+                <p>Agri tourism is the combination of tourism and agriculture it is fastest growing segment of travel industry that offers visit agricultural industries, working in farms, buy organic products, enjoy healthy and nutritious fruits, entertainment with local culture, education, relaxation, outdoor adventures, picking fruit, feeding animals etc. </p>
+              </div>
+            </li>
+            <li>
+              <div class="banner-w3lstext">
+                <h3>Involvement of Agriculture Experts & Market Platform</h3>
+                <p>We focus on direct linkage between buyer and supplier</p>
+              </div>
+            </li>
+            <li>
+              <div class="banner-w3lstext">
+                <h3>Research Hub</h3>
+                <p>We provide platform to share research papers as well as projects.</p>
+              </div>
+            </li>
+          </ul> 
+        </div>   
+      </div>
+    </div>
+    <!-- //banner-text -->    
+  </div>
+
+<div class="row" style="margin: 40px;">
+ <section class="site-main">               
+         <h1 class="entry-title">Research</h1>
+            <div class="entry-content">
+                <p style="text-align: justify;"><span style="color: #339966;"><br>
+Research Centre</span> at <span style="color: #339966;">Prangarik Pathshala(school of agriculture)</span> attempts to&nbsp;facilitate positive change through research that result in increased food production, income level, poverty reduction, food &amp; nutritional security through the availability of adequate, healthy, nutritious foods to all. We adopt research system responsive to the concerns, needs and problems of farmers, agro-enterprises, agri-businesses and agricultural stakeholders.</p>
+<p><img class="aligncenter wp-image-179 size-full" src="http://agricultureschool.org/index/wp-content/uploads/2016/08/IMG_2547.jpg" alt="IMG_2547" width="335" height="448" srcset="http://agricultureschool.org/wp-content/uploads/2016/08/IMG_2547.jpg 335w, http://agricultureschool.org/wp-content/uploads/2016/08/IMG_2547-224x300.jpg 224w" sizes="(max-width: 335px) 100vw, 335px"></p>
+<p>&nbsp;</p>
+<p style="text-align: justify;">To carry out research based projects on agricultural issues; we possess a team of agricultural experts, scholars, scientists and highly experienced and skilled practitioners. Through research, we promote clear and scientific analysis of the issues and seek to identify recommendations and solutions for sustainable agriculture.</p>
+<h1><span style="color: #ff0000;">Our research areas:</span></h1>
+<ul>
+<li>
+<p>Horticulture ( especially vegetables, mushrooms, fruits)</p>
+</li>
+<li>
+<p>Livestock</p>
+</li>
+<li>
+<p>Agriculture enterprise/entrepreneurship</p>
+</li>
+<li>
+<p>Agri-business</p>
+</li>
+<li>
+<p>Agriculture market</p>
+</li>
+<li>
+<p>Value chain</p>
+</li>
+<li>
+<p>Agriculture economy</p>
+</li>
+<li>
+<p>Sustainable and commercial agriculture</p>
+</li>
+<li>
+<p>Smallholder, semi-commercial and commercial farmers’ concerns</p>
+</li>
+<li>
+<p>Food systems and policies</p>
+</li>
+<li>
+<p>Resilient agriculture</p>
+</li>
+<li>
+<p>Land and agriculture</p>
+</li>
+<li>
+<p>Environment-friendly farming/Environment &amp; agriculture</p>
+</li>
+<li>
+<p>Organic farming</p>
+</li>
+<li>
+<p>The nexus between climate change and agriculture</p>
+</li>
+<li>
+<p>Water and agriculture</p>
+</li>
+<li>
+<p>Food supply chains</p>
+</li>
+<li>
+<p>Healthy food and lifestyles</p>
+</li>
+<li>
+<p>Food waste reduction</p>
+</li>
+<li>
+<p>Agriculture policies &amp; programs</p>
+</li>
+<li>
+<p>Agriculture politics/agro-governance</p>
+</li>
+<li>
+<p>Agriculture corruption</p>
+</li>
+<li>
+<p>Food security: availability, access, utilization, and stability</p>
+</li>
+<li>
+<p>Nutritional security</p>
+</li>
+<li>
+<p>Information and Communication technologies (ICTs) and agriculture</p>
+</li>
+<li>
+<p>Technology and agriculture</p>
+</li>
+<li>
+<p>Agro inputs and farming</p>
+</li>
+<li>
+<p>Agriculture insurance</p>
+</li>
+<li>
+<p>Youth and agriculture</p>
+</li>
+<li>
+<p>Women and agriculture</p>
+</li>
+<li>
+<p>Urban and peri-urban farming</p>
+</li>
+</ul>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</div>
+                                              
+            </section>
+</div>
+
+
+
+		
+<script type="text/javascript" src="{% static 'js/move-top.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/easing.js' %}"></script>  
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {
+        $(".scroll").click(function(event){   
+          event.preventDefault();
+      
+      $('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+        });
+      });
+    </script>
+  <!-- //end-smooth-scrolling   --> 
+  <!-- smooth-scrolling-of-move-up -->
+  <script type="text/javascript">
+    $(document).ready(function() {
+      /*
+      var defaults = {
+        containerID: 'toTop', // fading element id
+        containerHoverID: 'toTopHover', // fading element hover id
+        scrollSpeed: 1200,
+        easingType: 'linear' 
+      };
+      */
+      
+      $().UItoTop({ easingType: 'easeOutQuart' });
+      
+    });
+  </script>
+  <!-- //smooth-scrolling-of-move-up -->   
+  <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+</body>
+</html>
